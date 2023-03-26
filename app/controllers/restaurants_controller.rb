@@ -35,6 +35,15 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def destroy
+    @restaurant = Restaurant.find(params[:id])
+    if @restaurant.destroy
+      redirect_to restaurants_path
+    else
+      flash.now[:error] = "Impossible to delete the restaurant"
+    end
+  end
+
   private
 
   def restaurant_params
