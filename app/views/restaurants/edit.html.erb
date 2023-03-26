@@ -1,4 +1,4 @@
-<h1>Create a new restaurant</h1>
+<h1>Edit the restaurant</h1>
 
 <%= simple_form_for(@restaurant) do |f| %>
   <%= f.input :name, label: 'Name of the restaurant' %>
@@ -7,5 +7,3 @@
   <%= f.input :stars, collection: 1..5 %>
   <%= f.submit %>
 <% end %>
-
-<%= link_to "Comeback to home", restaurants_path %>
