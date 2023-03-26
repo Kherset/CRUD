@@ -10,7 +10,7 @@ Restaurant.destroy_all
 puts 'Database cleared !'
 puts ' Creating restaurants... '
 10.times do
-  Restaurant.create!(name: Faker::Restaurant.name , address: Faker::Address.street_address,
+  Restaurant.create!(name: Faker::Restaurant.name, address: Faker::Address.street_address,
                      chef: Faker::Name.name, stars: rand(1..5))
 end
 puts ' Restaurants created '
