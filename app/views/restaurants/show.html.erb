@@ -1,16 +1,14 @@
 <div class="show-page">
 
-
-
-
 <h1> <%= @restaurant.name %> </h1>
 
 <p>Adress: <%= @restaurant.address %></p>
 <p>Chef: <%= @restaurant.chef %></p>
 <p>Stars: <%= @restaurant.stars %></p>
 
-<%= link_to "Edit this restaurant", edit_restaurant_path  %>
-<%= link_to "Comeback to home", restaurants_path %>
-<%= link_to "Destroy this restaurant", restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-
+  <div class="menu-show">
+    <div><%= link_to "Edit this restaurant", edit_restaurant_path  %></div>
+    <div><%= link_to "Comeback to home", restaurants_path %></div>
+    <div><%= link_to "Destroy this restaurant", restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></div>
+  </div>
 </div>
